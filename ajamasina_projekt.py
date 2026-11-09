@@ -5,7 +5,8 @@ input("Siin on sul võimalik sisestada summa mille soovid reisile kaasa võtta j
 while True:
     raha = float(input("SUMMA EURODES: "))
     aasta = int(input("AASTA, KUHU SOOVID REISIDA: "))
-    
+
+    #dramaatilisteks pausideks
     from time import *
 
     if aasta <= 1200:
