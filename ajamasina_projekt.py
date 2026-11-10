@@ -27,8 +27,7 @@ while True:
     lõpeta = False
     
     #dramaatilisteks pausideks
-    from time import *
-    
+    from time import sleep
     
     #seda võib kindlasti täiendada ja lisada ajastuid
     eesti_ajastud = {"Eesti jääaega": (float("-inf"),-9000),
