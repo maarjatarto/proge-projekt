@@ -55,6 +55,16 @@ while True:
                     
             print(f"Reis õnnestus!! Sa oled aastas {aasta}.")
 
+            #ajastu konteksti natuke
+            with open("eesti_ajastud.csv", encoding = "utf-8") as fail:
+                for rida in fail:
+                    vahemik, märksõnad = rida.strip().split(";")
+                    ajastu_kirjeldus = märksõnad.strip().split(",")
+                    algus, lõpp = (vahemik.strip().split(","))
+                    if int(algus) <= aasta <= int(lõpp):
+                        
+                        print(f"Eestis valitseb {ajastu_kirjeldus[0]} ning eestlasi kimbutavad{ajastu_kirjeldus[1]} ja{ajastu_kirjeldus[2]}, aga kõik ei ole halvasti ka, sest{ajastu_kirjeldus[3]}  ")
+                        
             #nüüd siit edasi tuleks konstrueerida see valuutavahetuse süsteem
             #valuutavahetuse süsteem ja ostujõu arvutamine
             print("-" * 55)
