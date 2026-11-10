@@ -1,28 +1,47 @@
-#proge projekt "Ajareis Eesti rahas"
+# projekt "Ajareis Eesti rahas"
+# valuutavahetus programm, mis töötab Eesti ajaloo kontekstis ja toimib nagu ajamasin
+# autorid Maarja Tarto ja Huko Orro
+
+# inspiratsiooni saime siit https://www.nationalarchives.gov.uk/currency-converter/
+
+# TEHISARU: eesti_ajastud.csv on loodud tehisaruga, andes talle ette Eesti Entsüklopeedia lehel olnud Eesti ajaloo kronoloogia.
+        #   Ajastute vahemike arvutamise skeemi parandamiseks kasutasime tehisaru ja ka tsükli lõpetamise parandamiseks.
+        #   Veel tehisaru: 
+
+#Kuidas senine koostöö sujunud? Kuidas on rollid jagatud? Koostöö on sujunud hästi. Maarja on teinud praegu rohkem sissejuhatavat osa 
+# ja Huko valuutakonverteerimise osa.
+
+#Kui palju aega projektile on kulunud? Maarja: minul on projektile praegu kokku kulunud umbes 6 tundi.
+
+#Millised on projektiga seoses edasised plaanid ja edasiarendused? Tahaks ajastuid veel lisada ja konteksti täpsemaks teha. Raha väärtuse
+# kohta võiks olla ühine süsteem, mis ütleks iga ajastu kohta nt et selle raha eest saaksid sa osta nii mitu liitrit piima või nii mitu
+# pätsi leiba. Samuti tuleks neid erinevaid käibel olnud raha ühikuid lisada ja proovida suuremat täpsust saada. Tahaks kindlasti ka 
+# kasutada kasutajaliidest ja pildi- ja helitöötlust.
 
 input("Teretulemast mängu Ajareis Eesti rahas!\n")
 #tutvustus kasutajale
-input("Siin on sul võimalik sisestada summa, mille soovid reisile kaasa võtta ja aasta kuhu soovid reisida. ")
+input("Siin on sul võimalik sisestada summa, mille soovid reisile kaasa võtta ja aasta kuhu soovid reisida.")
 while True:
     raha = float(input("SUMMA EURODES: "))
     aasta = int(input("AASTA, KUHU SOOVID REISIDA: "))
+    lõpeta = False
     
     #dramaatilisteks pausideks
     from time import *
     
     
     #seda võib kindlasti täiendada ja lisada ajastuid
-    eesti_ajastud = {"Eesti jääaega": (-10000000,-9000),
+    eesti_ajastud = {"Eesti jääaega": (float("-inf"),-9000),
                      "Eesti muinasaega": (-9000,1200),
                      "Eesti keskaega": (1201,1558),
                      "Eesti varauusaega": (1559,1782),
                      "Eesti uusaega": (1783,1917),
-                     "Eesti Vabariigi aega": (1918,1939),
+                     "esimesse Eesti Vabariigi aega": (1918,1939),
                      "I NK okupatsiooni aega": (1940,1941),
                      "Saksa okupatsiooni aega": (1942,1944),
                      "sügavasse Nõukogude aega": (1945,1991),
                      "taasiseseisvunud Eesti vabariiki": (1991, 2026),
-                     "tulevikku": (2027,1000000000000)
+                     "tulevikku": (2027,float("inf"))
                      }  
     
     # ajamasina käivitamine
@@ -55,7 +74,8 @@ while True:
                     
             print(f"Reis õnnestus!! Sa oled aastas {aasta}.")
 
-            #ajastu konteksti natuke
+            # ajastu konteksti natuke
+            # programm avab csv faili, mis on lisatud siia main branchi alla
             with open("eesti_ajastud.csv", encoding = "utf-8") as fail:
                 for rida in fail:
                     vahemik, märksõnad = rida.strip().split(";")
@@ -64,8 +84,19 @@ while True:
                     if int(algus) <= aasta <= int(lõpp):
                         
                         print(f"Eestis valitseb {ajastu_kirjeldus[0]} ning eestlasi kimbutavad{ajastu_kirjeldus[1]} ja{ajastu_kirjeldus[2]}, aga kõik ei ole halvasti ka, sest{ajastu_kirjeldus[3]}  ")
-                        
-            #nüüd siit edasi tuleks konstrueerida see valuutavahetuse süsteem
+           
+            küsimus_2 = input("Oled valmis ajamasinast välja astuma? ")
+            if küsimus_2 == "ei":
+                küs_3 = input("Lähme algusesse? ")
+                if küs_3 == "ei":
+                    lõpeta = True
+                    break
+
+            print("Väga tore. Alustame rahavahetusega.")
+            sleep(2)
+            print(". . .")
+            sleep(2)      
+            
             #valuutavahetuse süsteem ja ostujõu arvutamine
             print("-" * 55)
             if aasta < 800:
@@ -108,6 +139,10 @@ while True:
             uuesti = input("\nKas soovid teha uue ajareisi? (jah/ei): ")
             if uuesti.lower() == "ei":
                 print("Aitäh ajareisil osalemast! Kohtumiseni tulevikus!")
+                lõpeta = True
                 break
+    if lõpeta:
+        break            
+print("Aitäh ajareisil osalemast! Kohtumiseni tulevikus!")
 
 
