@@ -56,5 +56,48 @@ while True:
             print(f"Reis õnnestus!! Sa oled aastas {aasta}.")
 
             #nüüd siit edasi tuleks konstrueerida see valuutavahetuse süsteem
-            
+            #valuutavahetuse süsteem ja ostujõu arvutamine
+            print("-" * 55)
+            if aasta < 800:
+                print(f"Aastal {aasta} rahatähti veel ei tuntud.")
+                print(f"Sinu {raha} € asemel kaupleksid sa hoopis hõbevalge, karusnahkade või viljaga!")
+            elif 800 <= aasta <= 1917:
+                väärtus = round(raha * 15, 2)
+                print(f"Aastal {aasta} kehtisid Eestis erinevad mündid (nt tsaarirublad, taalrid või killingid).")
+                print(f"Sinu {raha} € ostujõud oleks umbes {väärtus} hõberubla või kuldmünti.")
+                print("Ajalooline kontekst: Talupoja jaoks oli see suur varandus, millega sai osta kariloomi või maad.")
+            elif 1918 <= aasta <= 1927:
+                väärtus = round(raha * 350, 2)
+                print(f"Aastal {aasta} oli kasutusel Eesti mark.")
+                print(f"Sinu {raha} € on väärt umbes {väärtus} Eesti marka.")
+                print("Ajalooline kontekst: Noor Eesti vabariik – selle raha eest sai turult korraliku toidukorvi.")
+            elif 1928 <= aasta <= 1940:
+                väärtus = round(raha * 3.5, 2)
+                print(f"Aastal {aasta} oli kasutusel esimene Eesti kroon (EEK I).")
+                print(f"Sinu {raha} € on väärt umbes {väärtus} Eesti krooni.")
+                print("Ajalooline kontekst: Stabiilne majandusaeg – leib maksis umbes 15–20 senti.")
+            elif 1941 <= aasta <= 1991:
+                väärtus = round(raha * 2.5, 2)
+                print(f"Aastal {aasta} oli kasutusel Nõukogude rubla (või lühiajaliselt Saksa riigimark).")
+                print(f"Sinu {raha} € ostujõud on umbes {väärtus} rubla.")
+                print("Ajalooline kontekst: Hinnad olid riiklikult määratud – kinopilet maksis 20–50 kopikat.")
+            elif 1992 <= aasta <= 2010:
+                väärtus = round(raha * 15.6466, 2)
+                print(f"Aastal {aasta} oli kasutusel taasiseseisvunud Eesti kroon (EEK II).")
+                print(f"Sinu {raha} € on täpselt {väärtus} Eesti krooni.")
+                print("Ajalooline kontekst: Ametlik kurss oli 1 EUR = 15,6466 EEK. 1990ndatel sai selle eest palju rohkem kui 2010. aastal!")
+            elif 2011 <= aasta <= 2026:
+                print(f"Aastal {aasta} on Eestis kasutusel euro (€).")
+                print(f"Sinu {raha} € ongi {raha} €, kuid varasematel aastatel (nt 2011) sai selle eest umbes poole rohkem kaupa kui täna!")
+            else:
+                väärtus = round(raha * 0.4, 2)
+                print(f"Aastal {aasta} (tulevikus) on inflatsioon oma töö teinud.")
+                print(f"Sinu tänase {raha} € ostujõud on tulevikus umbes {väärtus} tänast eurot (või krüptokrediiti).")
+            print("-" * 55)
+
+            uuesti = input("\nKas soovid teha uue ajareisi? (jah/ei): ")
+            if uuesti.lower() == "ei":
+                print("Aitäh ajareisil osalemast! Kohtumiseni tulevikus!")
+                break
+
 
