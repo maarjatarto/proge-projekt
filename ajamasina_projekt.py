@@ -11,7 +11,7 @@ while True:
     from time import *
     
     
-    #seda võib kindlasti täiendada ja teha põhjalikumaks
+    #seda võib kindlasti täiendada ja lisada ajastuid
     eesti_ajastud = {"Eesti jääaega": (-10000000,-9000),
                      "Eesti muinasaega": (-9000,1200),
                      "Eesti keskaega": (1201,1558),
@@ -25,7 +25,7 @@ while True:
                      "tulevikku": (2027,1000000000000)
                      }  
     
-    
+    # ajamasina käivitamine
     for ajastu, (algus,lõpp) in eesti_ajastud.items():
         if algus <= aasta <= lõpp:
             print(f"Ahhaa, sa soovid reisida {ajastu}...")
@@ -40,9 +40,9 @@ while True:
                 print(f"       {i}\n")
                 sleep(2)
             
-            
+            # ma leidsin mingi allika mis ütles et enne u seda aega ei olnud üldse raha kasutusel aga see ei pruugi väga täpne loomulikult olla
             if aasta < 800:
-                print("AJAMASIN HOIATAB:\nSellel ajal ei kasutatud veel Eesti aladel raha ning sinu eurod pandaks ilmselt lõkesse ja sind ennast ilmselt varda otsas sinna samma lõkke peale küpsema.")
+                print("AJAMASIN HOIATAB:\nSellel ajal ei kasutatud veel Eesti aladel rahatähti ning sinu eurod pandaks ilmselt lõkesse ja sind ennast ilmselt varda otsas sinna samma lõkke peale küpsema.")
                 sleep(1)
                 print("...")
                 sleep(1)
@@ -53,7 +53,8 @@ while True:
                 else:
                     print(" Okei. Jätkame. ")
                     
-            print("Reis õnnestus!!")
-            
+            print(f"Reis õnnestus!! Sa oled aastas {aasta}.")
+
+            #nüüd siit edasi tuleks konstrueerida see valuutavahetuse süsteem
             
 
