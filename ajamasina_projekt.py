@@ -9,16 +9,17 @@
         #   Saime ka kaks arvutuste valemit tehisarust, et konverteerida rahaühikuid. 
         #   Õppisime paremini kasutama sõnastike ja for tsüklit ja et osad allikad on usaldusväärsemad kui teised.
 
-#Kuidas senine koostöö sujunud? Kuidas on rollid jagatud? Koostöö on sujunud hästi. Mõlemad oleme otsinud teema kohta allikaid. 
+# Kuidas senine koostöö sujunud? Kuidas on rollid jagatud? Koostöö on sujunud hästi. Mõlemad oleme otsinud teema kohta allikaid. 
 # Maarja on teinud praegu rohkem sissejuhatavat osa ja Huko valuutakonverteerimise osa. 
 
-#Kui palju aega projektile on kulunud? Maarja: minul on projektile praegu kokku kulunud umbes 6 tundi.
+# Kui palju aega projektile on kulunud? Maarja: minul on projektile praegu kokku kulunud umbes 6 tundi.
 # Huko: minul on siiani projektile kulunud ligikaudu 7 tundi.
 
-#Millised on projektiga seoses edasised plaanid ja edasiarendused? Tahaks ajastuid veel lisada ja konteksti täpsemaks teha. Raha väärtuse
+# Millised on projektiga seoses edasised plaanid ja edasiarendused? Tahaks ajastuid veel lisada ja konteksti täpsemaks teha. Raha väärtuse
 # kohta võiks olla ühine süsteem, mis ütleks iga ajastu kohta nt et selle raha eest saaksid sa osta nii mitu liitrit piima või nii mitu
 # pätsi leiba. Samuti tuleks neid erinevaid käibel olnud raha ühikuid lisada ja proovida suuremat täpsust saada. Tahaks kindlasti ka 
-# kasutada kasutajaliidest ja pildi- ja helitöötlust.
+# kasutada kasutajaliidest ja pildi- ja helitöötlust. Praegu ei ole ka jõudnud veel vormistusele ja programmi kompaktsusele piisavalt palju 
+# tähelepanu pöörata, mida peaks kindlasti edaspidi tegema. 
 
 input("Teretulemast mängu Ajareis Eesti rahas!\n")
 #tutvustus kasutajale
