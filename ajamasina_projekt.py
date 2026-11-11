@@ -4,10 +4,10 @@
 
 # inspiratsiooni saime siit https://www.nationalarchives.gov.uk/currency-converter/
 
-# TEHISARU: eesti_ajastud.csv on loodud tehisaruga, andes talle ette Eesti Entsüklopeedia lehel olnud Eesti ajaloo kronoloogia.
+# TEHISARU: eesti_ajastud.csv on loodud tehisaruga, andes talle ette Eesti Entsüklopeedia lehelt Eesti ajaloo kronoloogia.
         #   Ajastute vahemike arvutamise skeemi parandamiseks kasutasime tehisaru ja ka tsükli lõpetamise parandamiseks.
-        #   Veel tehisaru: Saime kaks arvutuste valemit tehisarust, et konverteerida rahaühikuid. 
-        #õppisime, et osad allikad on usaldusväärsemad kui teised.
+        #   Saime ka kaks arvutuste valemit tehisarust, et konverteerida rahaühikuid. 
+        #   Õppisime paremini kasutama sõnastike ja for tsüklit ja et osad allikad on usaldusväärsemad kui teised.
 
 #Kuidas senine koostöö sujunud? Kuidas on rollid jagatud? Koostöö on sujunud hästi. Mõlemad oleme otsinud teema kohta allikaid. 
 # Maarja on teinud praegu rohkem sissejuhatavat osa ja Huko valuutakonverteerimise osa. 
@@ -54,7 +54,7 @@ while True:
             sleep(3)
             print("...Käivitame ajamasina...")
             sleep(3)
-            print("   ...Hakkame startima...")
+            print("   ...Hakkame startima...\n")
             sleep(2)
             for i in range(1,4):
                 print(f"       {i}\n")
@@ -76,7 +76,7 @@ while True:
             print(f"Reis õnnestus!! Sa oled aastas {aasta}.")
 
             # ajastu konteksti natuke
-            # programm avab csv faili, mis on lisatud siia main branchi alla
+            # programm avab csv faili, mis on lisatud siia repository main branchi alla
             with open("eesti_ajastud.csv", encoding = "utf-8") as fail:
                 for rida in fail:
                     vahemik, märksõnad = rida.strip().split(";")
@@ -139,7 +139,6 @@ while True:
 
             uuesti = input("\nKas soovid teha uue ajareisi? (jah/ei): ")
             if uuesti.lower() == "ei":
-                print("Aitäh ajareisil osalemast! Kohtumiseni tulevikus!")
                 lõpeta = True
                 break
     if lõpeta:
