@@ -9,8 +9,8 @@
         #   Veel tehisaru: Saime kaks arvutuste valemit tehisarust, et konverteerida rahaühikuid. 
         #õppisime, et osad allikad on usaldusväärsemad kui teised.
 
-#Kuidas senine koostöö sujunud? Kuidas on rollid jagatud? Koostöö on sujunud hästi. Maarja on teinud praegu rohkem sissejuhatavat osa 
-# ja Huko valuutakonverteerimise osa. 
+#Kuidas senine koostöö sujunud? Kuidas on rollid jagatud? Koostöö on sujunud hästi. Mõlemad oleme otsinud teema kohta allikaid. 
+# Maarja on teinud praegu rohkem sissejuhatavat osa ja Huko valuutakonverteerimise osa. 
 
 #Kui palju aega projektile on kulunud? Maarja: minul on projektile praegu kokku kulunud umbes 6 tundi.
 # Huko: minul on siiani projektile kulunud ligikaudu 7 tundi.
