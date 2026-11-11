@@ -6,12 +6,14 @@
 
 # TEHISARU: eesti_ajastud.csv on loodud tehisaruga, andes talle ette Eesti Entsüklopeedia lehel olnud Eesti ajaloo kronoloogia.
         #   Ajastute vahemike arvutamise skeemi parandamiseks kasutasime tehisaru ja ka tsükli lõpetamise parandamiseks.
-        #   Veel tehisaru: 
+        #   Veel tehisaru: Saime kaks arvutuste valemit tehisarust, et konverteerida rahaühikuid. 
+        #õppisime, et osad allikad on usaldusväärsemad kui teised.
 
 #Kuidas senine koostöö sujunud? Kuidas on rollid jagatud? Koostöö on sujunud hästi. Maarja on teinud praegu rohkem sissejuhatavat osa 
-# ja Huko valuutakonverteerimise osa.
+# ja Huko valuutakonverteerimise osa. 
 
 #Kui palju aega projektile on kulunud? Maarja: minul on projektile praegu kokku kulunud umbes 6 tundi.
+# Huko: minul on siiani projektile kulunud ligikaudu 7 tundi.
 
 #Millised on projektiga seoses edasised plaanid ja edasiarendused? Tahaks ajastuid veel lisada ja konteksti täpsemaks teha. Raha väärtuse
 # kohta võiks olla ühine süsteem, mis ütleks iga ajastu kohta nt et selle raha eest saaksid sa osta nii mitu liitrit piima või nii mitu
